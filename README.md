@@ -36,6 +36,13 @@ npm run preview  # sirve dist/ en el puerto 4173
 
 Los iconos se generan con `scripts/generar-iconos.ps1` (Windows, System.Drawing).
 
+## Deploy
+
+Cada push a `main` dispara `.github/workflows/deploy.yml`: compila con Node 24 y
+publica en GitHub Pages. Sin rama de artefactos y sin pasos manuales.
+
+Si algo falla, el detalle está en la pestaña **Actions** del repo.
+
 ## Estructura
 
 ```
