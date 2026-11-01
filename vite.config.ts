@@ -44,6 +44,9 @@ export default defineConfig({
       workbox: {
         globPatterns: ['**/*.{js,css,html,svg,png,woff2}'],
         cleanupOutdatedCaches: true,
+        // El SW toma el control en la primera visita y las actualizaciones se aplican solas.
+        clientsClaim: true,
+        skipWaiting: true,
       },
     }),
   ],
